@@ -1,0 +1,10 @@
+export const getChangePasswordFormModalVisible = (state) => state.user.changePasswordFormModalVisible;
+export const getInformationFormModalVisible= (state) => state.user.informationFormModalVisible;
+export const getUser = (state) => state.user.user;
+export const getToken = (state) => state.user.user?.token;
+export const getUserId = (state) => state.user.user?._id;
+export const getUserRole = (state) => state.user.user?.role;
+export const getUserInformations = (state) => state.user.user?.informations;
+export const getUserAvatar = (state) => state.user.user?.avatar;
+export const getUnReadNotificationCount = (state) => state.user.user?.unReadNotificationCount;
+export const getUnreadMessagesCount = (state) => state.user.user?.unread.length;

@@ -1,0 +1,79 @@
+@import "~antd/dist/antd.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*  Định dạng giúp chữ chống tràn*/
+.text-responsive {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ant-scrolling-effect {
+}
+
+/* Làm image full một container */
+.fill-container-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.fill-container-image img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.ant-modal-confirm-error .ant-modal-content, .ant-modal-confirm .ant-modal-content{
+  border-radius: 15px;
+}
+
+.ant-modal-confirm-error button, .ant-modal-confirm button{
+  background-color: #615DFA!important;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.ant-modal-confirm-error button:hover, .ant-modal-confirm button:hover{
+  background-color: #FFFFFF !important;
+  border-color: #615DFA !important;
+  color: #615DFA !important;
+}
+
+.ant-modal-confirm button.ant-btn:not(.ant-btn-primary){
+  background-color: #FFFFFF !important;
+  border-color: transparent !important;
+  color: #3e3f5e !important;
+}
+.ant-modal-confirm button.ant-btn:not(.ant-btn-primary):hover{
+  background-color: #FFFFFF !important;
+  border-color: #3e3f5e !important;
+  color: #3e3f5e !important;
+}
+
+.ant-image-preview-wrap{
+  z-index: 9999999999!important;
+}
+.ant-image-preview-operations{
+  display: none;
+}
+
+.ant-popover-inner{
+  border-radius: 8px!important;
+}

@@ -1,0 +1,15 @@
+export const getAddPostFormModalVisible = (state) => state.postForm.addPostFormModalVisible;
+export const getEditPostFormModalVisible = (state) => state.postForm.editPostFormModalVisible;
+export const getPostFiles = (state) => state.postForm.files;
+export const getPostFilesToShow = (state) => state.postForm.filesToShow;
+export const getPostFilesToDelete = (state) => state.postForm.filesToDelete;
+export const getPostContent = (state) => state.postForm.content;
+export const getPostTags = (state) => state.postForm.tags;
+export const getPostLoading = (state) => state.postForm.loading;
+export const getUploadFilesLoading = (state) => state.postForm.uploadFilesLoading;
+export const getUploadPercent = (state) => state.postForm.uploadPercent;
+export const getEditPostId = (state) => state.postForm.editPostId;
+export const getEditPostType = (state) => state.postForm.editPostType;
+export const getEditSharedPost = (state) => state.postForm.editSharedPost;
+export const getDeletePostId = (state) => state.postForm.deletePostId;
+export const getGroupPostId = (state) => state.postForm.groupPostId;
