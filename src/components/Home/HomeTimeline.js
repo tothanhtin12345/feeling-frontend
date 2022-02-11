@@ -59,7 +59,7 @@ const HomeTimeline = () => {
             )}
             
             {posts.length > 0 && <Posts posts={posts} />}
-            {loading === true && posts.length <= 0 && (
+            {loading === true && (
               <div style={{ textAlign: "center" }}>
                 <Spin />
               </div>

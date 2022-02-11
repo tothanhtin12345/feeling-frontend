@@ -61,7 +61,7 @@ const GroupsDashboardTimeline = () => {
             {loading !== true && posts.length <= 0 && <NoDataTitle message={"Không có bài viết nào để hiển thị"}/>}
             
             {posts.length > 0 && <Posts posts={posts} />}
-            {loading === true && posts.length <= 0 && (
+            {loading === true && (
               <div style={{ textAlign: "center" }}>
                 <Spin />
               </div>
