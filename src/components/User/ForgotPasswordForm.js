@@ -56,7 +56,7 @@ const ForgotPasswordForm = () => {
             validateTrigger={["onBlur"]}
             rules={[
               { required: true, message: "Vui lòng nhập tên tài khoản" },
-              { min: 6, message: "Tên tài khoản ít nhất phải từ 6 kí tự" },
+              { min: 5, message: "Tên tài khoản ít nhất phải từ 5 kí tự" },
               { max: 26, message: "Tên tài khoản chỉ có nhiều nhất 26 kí tự" },
             ]}
           >
