@@ -173,7 +173,7 @@ const WallTimeline = ({wallUserId}) => {
       contactInformations.push({
         key: `work-address-${wallUserId}`,
         icon: <SmallIconStyled className="fas fa-building"></SmallIconStyled>,
-        title: "Nơi ở",
+        title: "Nơi làm việc",
         content: workAddress,
       });
     }

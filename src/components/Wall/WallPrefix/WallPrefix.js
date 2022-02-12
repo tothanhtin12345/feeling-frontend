@@ -115,11 +115,20 @@ const WallPrefix = ({
       originFileObj.size > 10485760
     ) {
       Modal.error({
-        content: "Image has to be smaller than 10mbs",
+        content: "Ảnh đại diện phải có kích thước bé hơn 10mbs",
         zIndex: 10010,
       });
       return;
     }
+
+    if (originFileObj.type.includes("video/")) {
+      Modal.error({
+        content: "Ảnh đại diện phải có định dạng ảnh",
+        zIndex: 10010,
+      });
+      return;
+    }
+
     const fileUpload = originFileObj;
     const fileUrl = URL.createObjectURL(originFileObj);
     const fileType = originFileObj.type.includes("video/") ? "video" : "image";
@@ -176,7 +185,10 @@ const WallPrefix = ({
           <div className="groups-avatar">
             <Avatar.Group>
               {groupsInformation.members.map((member, index) => (
-                <NavLink key={`${member._id}-member-mini-${index}`} to={`/wall/${member._id}`}>
+                <NavLink
+                  key={`${member._id}-member-mini-${index}`}
+                  to={`/wall/${member._id}`}
+                >
                   <OnlineAvatar
                     online={false}
                     size={32}
