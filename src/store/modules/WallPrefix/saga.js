@@ -14,7 +14,7 @@ import { updateGroupCover } from "../../../api/group";
 import { updateAvatar, updateCover } from "../User/slice";
 import { convertCodeToMessage } from "./handleError";
 import { updateWallUser, addWallPost } from "../../modules/Wall/slice";
-import { updateGroupDetails, addGroupsPost } from "../../modules/Groups/slice";
+import { updateGroupDetails, addGroupsPost, deleteGroupsPost } from "../../modules/Groups/slice";
 
 //upload post chung - dành cho cả avatar và cover và cover nhóm
 function* addPostWorker(postData) {
@@ -78,13 +78,16 @@ function* uploadCoverWorker(action) {
 //upload cover (ảnh bìa) cho nhóm
 function* uploadGroupCoverWorker(action) {
   try {
-    const { imagePost, groupId } = yield call(addPostWorker, action.payload);
+    const { imagePost, groupId, deletePostId } = yield call(addPostWorker, action.payload);
     console.log(imagePost);
     console.log(groupId);
     //update vào trong thông tin chi tiết của nhóm
     yield put(updateGroupDetails({ groupId, data: { cover: imagePost } }));
     //update vào trong danh sách bài post của nhóm
     yield put(addGroupsPost(imagePost));
+    if(deletePostId !== ""){
+      yield put (deleteGroupsPost(deletePostId));
+    }
   } catch (err) {
     yield call(showError, {
       title: "Đã xảy ra lỗi trong quá trình cập nhật ảnh bìa",

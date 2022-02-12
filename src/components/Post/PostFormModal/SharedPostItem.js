@@ -5,6 +5,7 @@ import PostFiles from "../PostItem/PostFiles";
 import { PostItemStyled } from "../../Styled/Post";
 import { MediumContentStyled } from "../../Styled/Text";
 import PostItemPrefix from "../PostItem/PostItemPrefix";
+import htmlParse from "html-react-parser";
 
 const SharePostItemStyled = styled.div`
   border: 1px solid #ccced2;
@@ -37,7 +38,7 @@ const SharedPostItem = ({ sharedPost, onFileClick }) => {
         </div>
         <div className="post-item-content">
           <MediumContentStyled className="content">
-            {content}
+            {content && htmlParse(content)}
           </MediumContentStyled>
         </div>
       </PostItemStyled>
